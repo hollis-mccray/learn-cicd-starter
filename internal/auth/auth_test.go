@@ -27,7 +27,7 @@ func TestGetAPIKey(t *testing.T) {
 
 		if !tc.pass && err == nil {
 			t.Fatalf("%s: expected: fail, got: pass", tc.name)
-		} else if tc.pass && err == nil {
+		} else if tc.pass && err != nil {
 			t.Fatalf("%s: expected: pass, got: fail %v", tc.name, err)
 		} else if got != tc.want {
 			t.Fatalf("%s: expectedP %s, got: %s", tc.name, tc.want, got)
