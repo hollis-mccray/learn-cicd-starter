@@ -5,8 +5,8 @@ on:
     branches: [main]
 
 jobs:
-  Tests:
-    name: Checking Go version
+  tests:
+    name: Tests
     runs-on: ubuntu-latest
 
     steps:
